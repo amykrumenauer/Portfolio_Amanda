@@ -361,3 +361,25 @@ if(year){
 year.textContent=new Date().getFullYear();
 
 }
+
+const track = document.querySelector(".carousel-track");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+if (track && next && prev) {
+
+    next.addEventListener("click", () => {
+        track.scrollBy({
+            left: 550,
+            behavior: "smooth"
+        });
+    });
+
+    prev.addEventListener("click", () => {
+        track.scrollBy({
+            left: -550,
+            behavior: "smooth"
+        });
+    });
+
+}
