@@ -248,7 +248,7 @@ nav a:hover{
 
 .btn{
 
-    padding:15px 35px;
+    padding:5px 15px;
 
     background:var(--purple);
 
@@ -262,13 +262,13 @@ nav a:hover{
 
 .btn:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(5px);
 
 }
 
 .btn-outline{
 
-    padding:15px 35px;
+    padding:5px 15px;
 
     border:2px solid var(--purple);
 
@@ -514,139 +514,56 @@ section{
 =========================== */
 
 .carousel{
-
-    display:flex;
-    align-items:center;
-    gap:25px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-.carousel-track{
-
-    display:flex;
-    overflow-x:auto;
-    gap:35px;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-
-}
-
-.carousel-track::-webkit-scrollbar{
-
-    display:none;
-
+.carousel-controls{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .project{
-
-    min-width:500px;
-
-    background:#17171c;
-
+    flex:0 0 100%;
+    background:#18181b;
+    border:1px solid rgba(255,255,255,.08);
     border-radius:20px;
-
-    overflow:hidden;
-
-    transition:.4s;
-
+    padding:40px;
+    transition:.35s;
 }
 
 .project:hover{
-
     transform:translateY(-8px);
-
-    box-shadow:0 0 30px rgba(139,92,246,.35);
-
-}
-
-.project img{
-
-    width:100%;
-    height:300px;
-    object-fit:cover;
-
-}
-
-.project-info{
-
-    padding:30px;
-
-}
-
-.project-info h3{
-
-    margin-bottom:15px;
-
-}
-
-.project-info p{
-
-    color:#bbb;
-
-    margin-bottom:20px;
-
-}
-
-.project-info span{
-
-    color:#770000;
-
-    font-size:14px;
-
+    border-color:#750000;
+    box-shadow:0 0 25px rgba(139,92,246,.35);
 }
 
 .arrow{
+    width: 50px;
+    height: 50px;
 
-    width:55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    height:55px;
+    border: none;
+    border-radius: 50%;
 
-    border:none;
+    background: #850000;
+    color: #fff;
 
-    border-radius:50%;
-
-    background:#7a0000;
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:28px;
-
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.techs{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin:20px 0;
-}
-
-.techs span{
-    background:#880000;
-    color:#fff;
-    padding:8px 15px;
-    border-radius:50px;
-    font-size:13px;
-    font-weight:500;
-}
-
-.project-links{
-    display:flex;
-    gap:15px;
-    margin-top:20px;
-}
-
-.project-links a{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.project-links i{
-    font-size:18px;
+.arrow:hover{
+    transform: scale(1.1);
+    background: #9b0000;
 }
 
 /* ===========================
@@ -720,78 +637,52 @@ footer span{
    RESPONSIVO
 =========================== */
 
-@media screen and (max-width: 900px){
+@media(max-width:900px){
 
-    .hero-content{
-        grid-template-columns:1fr;
-        text-align:center;
-        gap:40px;
+    #nav-menu{
+
+        position:fixed;
+
+        top:80px;
+
+        right:-100%;
+
+        width:260px;
+
+        height:100vh;
+
+        background:#111;
+
+        transition:.4s;
+
+        padding:40px;
+
     }
 
-    .about{
-        grid-template-columns:1fr;
+    #nav-menu.active{
+
+        right:0;
+
     }
 
-    .about-cards{
-        grid-template-columns:repeat(2,1fr);
-    }
+    #nav-menu ul{
 
-    nav{
-        display:none;
+        display:flex;
+
+        flex-direction:column;
+
+        gap:30px;
+
     }
 
     .menu{
+
         display:block;
-        font-size:35px;
+
         cursor:pointer;
-    }
 
-    .hero h1{
-        font-size:50px;
-    }
+        font-size:32px;
 
-    .hero-image{
-        margin-top:40px;
-    }
-
-    .carousel{
-        flex-direction:column;
-    }
-
-    .project{
-        min-width:100%;
-    }
-
-    .skills-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media screen and (max-width:600px){
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .buttons{
-        flex-direction:column;
-    }
-
-    .skills-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-cards{
-        grid-template-columns:1fr;
-    }
-
-    .section-title{
-        font-size:30px;
     }
 
 }

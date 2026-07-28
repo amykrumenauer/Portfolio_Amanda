@@ -197,61 +197,23 @@ window.addEventListener("scroll", ()=>{
    PROJETOS
 ========================================== */
 
-const projetos = [
+const track = document.querySelector(".carousel-track");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
 
-{
-nome:"AMAPE Tecnologia",
-descricao:"Landing page da empresa.",
-imagem:"assets/img/amape.png"
-},
-
-{
-nome:"Toca dos Tatus",
-descricao:"Sistema para adoção de animais.",
-imagem:"assets/img/toca.png"
-},
-
-{
-nome:"Peixaria Empório do Vale",
-descricao:"Website institucional responsivo.",
-imagem:"assets/img/peixaria.png"
-},
-
-{
-nome:"Canal de Denúncias",
-descricao:"Aplicativo Android em Kotlin.",
-imagem:"assets/img/canal.png"
-}
-
-];
-
-const container = document.querySelector(".projects");
-
-if(container){
-
-projetos.forEach(p=>{
-
-container.innerHTML += `
-
-<div class="project">
-
-<img src="${p.imagem}" alt="${p.nome}">
-
-<div class="project-info">
-
-<h3>${p.nome}</h3>
-
-<p>${p.descricao}</p>
-
-</div>
-
-</div>
-
-`;
-
+next.addEventListener("click", () => {
+    track.scrollBy({
+        left: track.clientWidth,
+        behavior: "smooth"
+    });
 });
 
-}
+prev.addEventListener("click", () => {
+    track.scrollBy({
+        left: -track.clientWidth,
+        behavior: "smooth"
+    });
+});
 
 /* ==========================================
    PARTICULAS
@@ -292,7 +254,7 @@ ctx.beginPath();
 
 ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
 
-ctx.fillStyle="#8B5CF6";
+ctx.fillStyle="#fbff00";
 
 ctx.fill();
 
@@ -361,25 +323,11 @@ if(year){
 year.textContent=new Date().getFullYear();
 
 }
+const menuBtn = document.querySelector("#menu-btn");
+const nav = document.querySelector("#nav-menu");
 
-const track = document.querySelector(".carousel-track");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
+menuBtn.addEventListener("click", () => {
 
-if (track && next && prev) {
+    nav.classList.toggle("active");
 
-    next.addEventListener("click", () => {
-        track.scrollBy({
-            left: 550,
-            behavior: "smooth"
-        });
-    });
-
-    prev.addEventListener("click", () => {
-        track.scrollBy({
-            left: -550,
-            behavior: "smooth"
-        });
-    });
-
-}
+});
