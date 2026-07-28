@@ -604,26 +604,27 @@
 
             <h2 class="section-title">
 
-                Vamos Conversar ?
+                Vamos Conversar?
 
             </h2>
 
-            <form>
+        <form action="https://formsubmit.co/krumenaueramy5@gmail.com" method="POST">
 
-                <input type="text" placeholder="Nome">
+    <input type="text" name="nome" placeholder="Nome" required>
 
-                <input type="email" placeholder="E-mail">
+    <input type="email" name="email" placeholder="E-mail" required>
 
-                <textarea placeholder="Mensagem"></textarea>
+    <textarea name="mensagem" placeholder="Mensagem" required></textarea>
 
-                <button class="btn">
+    <button class="btn" type="submit">
+        Enviar
+    </button>
 
-                    Enviar
+    <input type="hidden" name="_captcha" value="false">
 
-                </button>
+    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
 
-            </form>
-
+</form>
         </div>
 
     </section>
