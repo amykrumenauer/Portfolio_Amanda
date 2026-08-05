@@ -12,9 +12,9 @@ Este projeto foi desenvolvido para apresentar minha trajetória, habilidades e p
 
 ## ✨ Sobre
 
-Sou apaixonada por tecnologia e por criar soluções que unem design, performance e segurança.
+SSou apaixonada por tecnologia e por criar soluções que unem design, performance e segurança.
 
-Atualmente atuo como Desenvolvedora Full Stack e estudo Cibersegurança, buscando desenvolver aplicações modernas, intuitivas e seguras.
+Sou formada em Desenvolvimento de Sistemas, graduada em Análise e Desenvolvimento de Sistemas e atualmente curso uma pós-graduação em Cibersegurança. Tenho experiência no desenvolvimento de aplicações web e estou em constante evolução como Desenvolvedora Full Stack.
 
 ---
 
@@ -130,8 +130,6 @@ Curso de Inglês
 ---
 
 ## 📫 Contato
-
-📧 Email: seuemail@email.com
 
 💼 LinkedIn: https://linkedin.com/in/amandakrumenauer
 
