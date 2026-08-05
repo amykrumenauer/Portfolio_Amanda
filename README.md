@@ -121,7 +121,7 @@ Pós-graduação em Cibersegurança
 
 ---
 
-**Wizard by Pearson**
+**Yizági**
 
 Curso de Inglês
 
