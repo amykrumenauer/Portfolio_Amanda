@@ -6,7 +6,7 @@ Este projeto foi desenvolvido para apresentar minha trajetória, habilidades e p
 
 ## 🌐 Acesse
 
-🔗 **Portfólio:** https://seu-link.com
+🔗 **Portfólio:** (https://portfolio-amanda-lime.vercel.app/)
 
 ---
 
@@ -79,7 +79,7 @@ Tecnologias:
 
 - React
 - Node.js
-- MySQL
+- JavaScript
 
 ---
 
@@ -137,7 +137,7 @@ Curso de Inglês
 
 🐙 GitHub: https://github.com/amykrumenauer
 
-🌐 Portfólio: https://seu-link.com
+🌐 Portfólio: https://portfolio-amanda-lime.vercel.app/
 
 ---
 
