@@ -5,23 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>A m a n d a  K r u m e n a u e r | Full Stack Developer & Cybersecurity</title>
+    <meta
+        name="description"
+        content="Portfólio de Amanda Krumenauer — desenvolvimento, tecnologia, cibersegurança, design e criatividade."
+    >
 
-    <meta name="description"
-        content="Portfólio de Amanda Krumenauer, Desenvolvedora Full Stack e entusiasta em Cibersegurança.">
+    <title>Amanda Krumenauer | Portfólio</title>
 
-    <link rel="icon" href="assets/favicon.png">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <meta name="google-site-verification" content="Hp-8a9d9XMd8dLA7z2N-x6Yr6fNpLksDGy6_JsSkM0M" />
-
-    <!-- Google Fonts -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- REMIX ICONS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -29,395 +36,1035 @@
 
 <body>
 
-    <!--==================== LOADER ====================-->
+    <!-- =====================================================
+         FUNDO
+    ====================================================== -->
 
-    <div id="loader">
-
-        <h1>A M A N D A  K R U M E N A U E R</h1>
-
-        <span>Inicializando Portfólio...</span>
-
-    </div>
-
-    <!--==================== CURSOR ====================-->
+    <canvas id="particles"></canvas>
 
     <div class="cursor"></div>
 
-    <!--==================== HEADER ====================-->
+
+    <!-- =====================================================
+         LOADER
+    ====================================================== -->
+
+    <div id="loader">
+
+        <div class="loader-symbol">
+            ✦
+        </div>
+
+        <h1>AMANDA</h1>
+
+        <span>
+            carregando criatividade...
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
     <header>
 
         <div class="container nav">
 
-            <a href="#" class="logo">
-
-                A K
-
+            <a href="#home" class="logo">
+                AK.
             </a>
 
-<div class="menu">
-    <i class="ri-menu-3-line" id="menu-btn"></i>
-</div>
+            <nav id="nav-menu">
 
-<nav id="nav-menu">
+                <ul>
 
-    <ul>
+                    <li>
+                        <a href="#home">
+                            Início
+                        </a>
+                    </li>
 
-        <li><a href="#home">H o m e</a></li>
-        <li><a href="#about">S o b r e</a></li>
-        <li><a href="#skills">S k i l l s</a></li>
-        <li><a href="#projects">P r o j e t o s</a></li>
-        <li><a href="#cyber">C y b e r</a></li>
-        <li><a href="#contact">C o n t a t o</a></li>
+                    <li>
+                        <a href="#about">
+                            Sobre
+                        </a>
+                    </li>
 
-    </ul>
+                    <li>
+                        <a href="#education">
+                            Formação
+                        </a>
+                    </li>
 
-</nav>
+                    <li>
+                        <a href="#skills">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">
+                            Projetos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#creations">
+                            Criações
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <i
+                class="ri-menu-3-line menu"
+                id="menu-btn"
+            ></i>
+
+        </div>
 
     </header>
 
-    <!--==================== HOME ====================-->
 
-    <section class="hero" id="home">
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-        <div class="container hero-content">
+    <main>
 
-            <div class="hero-text">
+        <section class="hero" id="home">
 
-                <span>Hello World, me chamo...</span>
+            <div class="hero-decoration flower-one">
+                ✿
+            </div>
 
-                <h1>
+            <div class="hero-decoration flower-two">
+                ❀
+            </div>
 
-                    A m a n d a <br>
+            <div class="hero-decoration book-decoration">
+                <i class="ri-book-open-line"></i>
+            </div>
 
-                    <strong>Krumenauer :)</strong>
+            <div class="container hero-content">
 
-                </h1>
+                <div class="hero-text">
 
-                <h2 id="typing"></h2>
+                    <span class="eyebrow">
+                        ✦ tecnologia, criatividade & código
+                    </span>
 
-                <p>
+                    <h1>
+                        Olá, eu sou Amanda
+                        <strong>Krumenauer.</strong>
+                    </h1>
 
-                    Desenvolvedora Full Stack apaixonada por criar aplicações modernas,
-                    intuitivas e seguras, unindo desenvolvimento web com
-                    Cibersegurança.
+                    <h2>
+                        <span id="typing"></span>
+                    </h2>
 
+                    <p>
+                        Desenvolvedora apaixonada por tecnologia,
+                        criatividade e experiências digitais.
+                        Gosto de transformar ideias em projetos
+                        que tenham personalidade, propósito e
+                        uma boa experiência para quem está do outro
+                        lado da tela.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a
+                            href="#projects"
+                            class="btn"
+                        >
+                            Ver meus projetos
+                        </a>
+
+                        <a
+                            href="#contact"
+                            class="btn-outline"
+                        >
+                            Vamos conversar
+                        </a>
+
+                    </div>
+
+                    <div class="social">
+
+                        <a
+                            href="https://github.com/amykrumenauer"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <i class="ri-github-line"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/amanda-krumenauer-257069289"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/amy_.kmr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                        >
+                            <i class="ri-instagram-line"></i>
+                        </a>
+
+                        <a
+                            href="mailto:krumenaueramy5@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="ri-mail-line"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO -->
+
+                <div class="hero-image">
+
+                    <div class="circle"></div>
+
+                    <div class="image-ring"></div>
+
+                    <img
+                        src="assets/amanda.jpg"
+                        alt="Foto de Amanda Krumenauer"
+                    >
+
+                    <div class="image-note">
+                        <i class="ri-sparkling-2-line"></i>
+                        criando desde sempre
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SOBRE
+        ====================================================== -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Minha história
+                </h2>
+
+                <div class="about">
+
+                    <div class="about-text">
+
+                        <div class="story-mark">
+                            <i class="ri-book-3-line"></i>
+                        </div>
+
+                        <p>
+                            Minha relação com a tecnologia começou
+                            muito antes de eu imaginar que ela poderia
+                            se tornar uma profissão.
+                        </p>
+
+                        <p>
+                            Aos <strong>8 anos</strong>, comecei a
+                            explorar JavaScript através do
+                            <strong>Khan Academy</strong>. Eu era
+                            criança, mas já tinha curiosidade em
+                            descobrir o que existia por trás das telas
+                            e entender como as coisas funcionavam.
+                        </p>
+
+                        <p>
+                            Uma das pessoas que mais incentivou esse
+                            caminho foi meu irmão. Foi ele quem me deu
+                            meu <strong>primeiro notebook</strong> e,
+                            de certa forma, abriu uma porta para um
+                            universo que acabou se tornando parte de
+                            quem eu sou.
+                        </p>
+
+                        <p>
+                            Minha trajetória também foi marcada por
+                            oportunidades que fizeram diferença.
+                            Conquistei <strong>bolsas de estudos de
+                            100%</strong> no <strong>SENAI</strong>
+                            e na <strong>PUC-PR</strong>, transformando
+                            aquela curiosidade de criança em formação,
+                            experiência e profissão.
+                        </p>
+
+                        <p>
+                            Ao longo desse caminho, fui explorando
+                            desenvolvimento, interfaces, backend,
+                            design, cibersegurança e criação.
+                        </p>
+
+                        <p>
+                            Hoje gosto de unir esses mundos:
+                            <strong>lógica e criatividade.</strong>
+                            Não quero apenas escrever código. Quero
+                            criar coisas que tenham propósito,
+                            personalidade e uma experiência que faça
+                            sentido.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-cards">
+
+                        <div class="card story-card">
+
+                            <div class="card-icon">
+                                <i class="ri-cake-3-line"></i>
+                            </div>
+
+                            <h3>
+                                com 8 anos
+                            </h3>
+
+                            <span>
+                                comecei a programar
+                            </span>
+
+                        </div>
+
+
+                        <div class="card story-card">
+
+                            <div class="card-icon">
+                                <i class="ri-code-s-slash-line"></i>
+                            </div>
+
+                            <h3>
+                                JS
+                            </h3>
+
+                            <span>
+                                primeiro contato
+                            </span>
+
+                        </div>
+
+
+                        <div class="card story-card">
+
+                            <div class="card-icon">
+                                <i class="ri-award-line"></i>
+                            </div>
+
+                            <h3>
+                                100%
+                            </h3>
+
+                            <span>
+                                bolsas de estudo
+                            </span>
+
+                        </div>
+
+
+                        <div class="card story-card">
+
+                            <div class="card-icon">
+                                <i class="ri-lightbulb-line"></i>
+                            </div>
+
+                            <h3>
+                                ∞
+                            </h3>
+
+                            <span>
+                                ideias para criar
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FORMAÇÃO
+        ====================================================== -->
+
+        <section id="education">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Formação acadêmica
+                </h2>
+
+                <p class="section-intro">
+                    Da curiosidade de criança à formação profissional,
+                    minha trajetória foi construída através de
+                    oportunidades, estudo e muita vontade de aprender.
                 </p>
 
-                <div class="buttons">
 
-                    <a href="#projects" class="btn">
+                <div class="education-grid">
 
-                        Ver Projetos
+                    <!-- SENAI -->
 
-                    </a>
+                    <article class="education-card">
 
-                    <a href="#contact" class="btn-outline">
+                        <div class="education-top">
 
-                        Contato
+                            <div class="education-icon">
+                                <i class="ri-code-box-line"></i>
+                            </div>
 
-                    </a>
+                            <span>
+                                SENAI
+                            </span>
 
-                </div>
+                        </div>
 
-                <div class="social">
-
-                    <a href="https://github.com/amykrumenauer"><i class="ri-github-fill"></i></a>
-
-                    <a href="https://www.linkedin.com/in/amanda-krumenauer-257069289/"><i class="ri-linkedin-box-fill"></i></a>
-
-                    <a href="https://www.instagram.com\amy_.kmr"><i class="ri-instagram-line"></i></a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-
-                <div class="circle"></div>
-
-                <img src="assets/img_home.jpg" alt="Amanda">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--==================== SOBRE ====================-->
-
-    <section id="about">
-
-        <div class="container">
-
-            <h2 class="section-title">
-
-                S o b r e  M i m
-
-            </h2>
-
-            <div class="about">
-
-                <div class="about-text">
-
-                    <p>
-
-                        Sou desenvolvedora Full Stack e graduada em Análise e Desenvolvimento de Sistemas pela PUCPR,
-                        apaixonada por transformar ideias em soluções digitais.
-
-                    </p>
-
-                    <p>
-
-                        Além do desenvolvimento web, dedico meus estudos à
-                        Cibersegurança, Infraestrutura e Automação de Processos,
-                        buscando construir aplicações eficientes e seguras.
-
-                    </p>
-
-                </div>
-
-                <div class="about-cards">
-
-                    <div class="card">
-
-                        <h3>1 5 +</h3>
-
-                        <span>P r o j e t o s</span>
-
-                    </div>
-
-                    <div class="card">
-
-                        <h3>2 0 +</h3>
-
-                        <span>T e c n o l o g i a s</span>
-
-                    </div>
-
-                    <div class="card">
-
-                        <h3>1 0 0 %</h3>
-
-                        <span>R e s p o n s i v o</span>
-
-                    </div>
-
-                    <div class="card">
-
-                        <h3>∞</h3>
-
-                        <span>A p r e n d i z a d o</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--==================== SKILLS ====================-->
-
-<section id="skills">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            T e c n o l o g i a s
-        </h2>
-
-        <div class="skills-grid">
-
-            <div class="card">
-                <i class="ri-html5-fill"></i>
-                <h3>HTML5</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-css3-fill"></i>
-                <h3>CSS3</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-javascript-fill"></i>
-                <h3>JavaScript</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-reactjs-line"></i>
-                <h3>React</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-nodejs-line"></i>
-                <h3>Node.js</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-database-2-fill"></i>
-                <h3>MySQL</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-git-branch-fill"></i>
-                <h3>Git</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-github-fill"></i>
-                <h3>GitHub</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-terminal-box-fill"></i>
-                <h3>Linux</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-code-box-fill"></i>
-                <h3>Java</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-code-s-slash-line"></i>
-                <h3>Python</h3>
-            </div>
-
-            <div class="card">
-                <i class="ri-cloud-fill"></i>
-                <h3>Docker</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--==================== PROJETOS ====================-->
-
-<section id="projects">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            P r o j e t o s
-        </h2>
-
-        <div class="carousel">
-
-            <!-- Botão Anterior -->
-            <button class="arrow prev">
-                <i class="ri-arrow-left-s-line"></i>
-            </button>
-
-            <!-- Carrossel -->
-            <div class="carousel-track">
-
-                <!-- ================= PROJETO 1 ================= -->
-
-                <div class="project">
-
-                    <div class="project-info">
-
-                        <h3>AMAPE Tecnologia</h3>
+                        <h3>
+                            Técnico em Desenvolvimento de Sistemas
+                        </h3>
 
                         <p>
-                            Landing page institucional desenvolvida para apresentar os serviços da empresa, com foco em design moderno, responsividade e performance.
+                            Formação técnica em desenvolvimento de
+                            sistemas, programação, lógica, banco de
+                            dados, desenvolvimento web e criação de
+                            soluções digitais.
                         </p>
 
-                        <div class="techs">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                        <div class="scholarship">
+                            <i class="ri-star-fill"></i>
+                            Bolsa de estudos de 100%
                         </div>
 
-                        <div class="project-links">
+                    </article>
 
-                            <a href="https://amape-tecnologia.vercel.app/" target="_blank" class="btn">
-                                <i class="ri-global-line"></i>
-                                Site
-                            </a>
 
-                            <a href="https://github.com/amykrumenauer/Amape_Tecnologia" target="_blank" class="btn-outline">
-                                <i class="ri-github-fill"></i>
-                                GitHub
-                            </a>
+                    <!-- PUC -->
+
+                    <article class="education-card featured">
+
+                        <div class="education-top">
+
+                            <div class="education-icon">
+                                <i class="ri-graduation-cap-line"></i>
+                            </div>
+
+                            <span>
+                                PUC-PR
+                            </span>
 
                         </div>
 
-                    </div>
-
-                </div>
-
-                <!-- ================= PROJETO 2 ================= -->
-
-                <div class="project">
-
-                    <div class="project-info">
-
-                        <h3>Toca dos Tatus</h3>
+                        <h3>
+                            Análise e Desenvolvimento de Sistemas
+                        </h3>
 
                         <p>
-                            Plataforma web para adoção responsável de animais, conectando ONGs, protetores independentes e futuros adotantes.
+                            Graduação voltada para desenvolvimento de
+                            software, programação, análise de sistemas,
+                            banco de dados e criação de soluções
+                            tecnológicas.
                         </p>
 
-                        <div class="techs">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MySQL</span>
+                        <div class="scholarship">
+                            <i class="ri-star-fill"></i>
+                            Bolsa de estudos de 100%
                         </div>
 
-                        <div class="project-links">
+                    </article>
 
-                            <a href="https://sitetocadostatus.vercel.app/" target="_blank" class="btn">
-                                <i class="ri-global-line"></i>
-                                Site
-                            </a>
 
-                            <a href="https://github.com/amykrumenauer/Toca-dos-Tatus" target="_blank" class="btn-outline">
-                                <i class="ri-github-fill"></i>
-                                GitHub
-                            </a>
+                    <!-- CIBER -->
+
+                    <article class="education-card">
+
+                        <div class="education-top">
+
+                            <div class="education-icon">
+                                <i class="ri-shield-keyhole-line"></i>
+                            </div>
+
+                            <span>
+                                PUC-PR
+                            </span>
 
                         </div>
 
-                    </div>
-
-                </div>
-
-                <!-- ================= PROJETO 3 ================= -->
-
-                <div class="project">
-
-                    <div class="project-info">
-
-                        <h3>Peixaria & Empório do Vale</h3>
+                        <h3>
+                            Cibersegurança
+                        </h3>
 
                         <p>
-                            Site institucional desenvolvido para fortalecer a presença digital da empresa, com foco em experiência do usuário e identidade visual.
+                            Especialização voltada para segurança da
+                            informação, proteção de sistemas, redes,
+                            dados e ambientes digitais.
                         </p>
 
-                        <div class="techs">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                        <div class="education-tag">
+                            Especialização
                         </div>
 
-                        <div class="project-links">
+                    </article>
 
-                            <a href="https://peixariaeemporiodovale.vercel.app/" target="_blank" class="btn">
-                                <i class="ri-global-line"></i>
-                                Site
-                            </a>
+                </div>
 
-                            <a href="https://github.com/amykrumenauer/Peixaria" target="_blank" class="btn-outline">
-                                <i class="ri-github-fill"></i>
-                                GitHub
-                            </a>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
+
+        <section id="skills">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Skills
+                </h2>
+
+                <div class="skills-grid">
+
+                    <div class="card skill-card">
+                        <i class="ri-html5-line"></i>
+                        <h3>HTML</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-css3-line"></i>
+                        <h3>CSS</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-javascript-line"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-reactjs-line"></i>
+                        <h3>React</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-nodejs-line"></i>
+                        <h3>Node.js</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-terminal-box-line"></i>
+                        <h3>Backend</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-shield-keyhole-line"></i>
+                        <h3>Cibersegurança</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-layout-4-line"></i>
+                        <h3>UI / UX</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-palette-line"></i>
+                        <h3>Design</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-database-2-line"></i>
+                        <h3>Banco de dados</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-layout-masonry-line"></i>
+                        <h3>Figma</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-palette-line"></i>
+                        <h3>Canva</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                        <i class="ri-server-line"></i>
+                        <h3>Infraestrutura</h3>
+                    </div>
+
+                    <div class="card skill-card">
+                    <i class="ri-customer-service-2-line"></i>
+                    <h3>Suporte ao usuário</h3>
+                </div>
+
+                    <div class="card skill-card">
+                    <i class="ri-computer-line"></i>
+                    <h3>Controle de ativos</h3>
+                </div>
+
+                    <div class="card skill-card">
+                    <i class="ri-settings-5-line"></i>
+                    <h3>Automações</h3>
+                </div>
+
+                    <div class="card skill-card">
+                <i class="ri-translate-2"></i>
+                <h3>Inglês</h3>
+            </div>
+                    <div class="card skill-card">
+                <i class="ri-translate-2"></i>
+                <h3>Espanhol</h3>
+            </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJETOS
+        ====================================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Projetos
+                </h2>
+
+                <p class="section-intro">
+                    Alguns dos projetos que desenvolvi ao longo da
+                    minha trajetória.
+                </p>
+
+
+                <div class="carousel">
+
+                    <button
+                        class="arrow prev"
+                        aria-label="Projeto anterior"
+                    >
+                        <i class="ri-arrow-left-line"></i>
+                    </button>
+
+
+                    <div class="carousel-track">
+
+
+                        <!-- PEIXARIA -->
+
+                        <article class="project">
+
+                            <div class="project-number">
+                                01
+                            </div>
+
+                            <div class="project-decoration">
+                                ✿
+                            </div>
+
+                            <div class="project-info">
+
+                                <span class="project-type">
+                                    PROJETO REAL
+                                </span>
+
+                                <h3>
+                                    Peixaria & Empório do Vale
+                                </h3>
+
+                                <p>
+                                    Desenvolvimento de um site completo
+                                    para uma peixaria e empório, com identidade
+                                    visual própria, informações do
+                                    estabelecimento, cardápio e integração com
+                                    canais digitais.
+                                </p>
+
+                                <div class="techs">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>React JS</span>
+                                    <span>Vercel</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a
+                                        href="https://www.peixariaeemporiodovale.com/"
+                                        class="btn"
+                                    >
+                                        <i class="ri-external-link-line"></i>
+                                        Ver projeto
+                                    </a>
+
+                                    <a
+                                        href="https://github.com/amykrumenauer/Peixaria
+                                        class="btn-outline"
+                                    >
+                                        <i class="ri-github-line"></i>
+                                        GitHub
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- TOCA DOS TATUS -->
+
+                        <article class="project">
+
+                            <div class="project-number">
+                                02
+                            </div>
+
+                            <div class="project-decoration">
+                                ❀
+                            </div>
+
+                            <div class="project-info">
+
+                                <span class="project-type">
+                                    PROJETO ACADÊMICO
+                                </span>
+
+                                <h3>
+                                    Toca dos Tatus
+                                </h3>
+
+                                <p>
+                                    Projeto voltado para adoção responsável
+                                    de animais, pensado para facilitar a
+                                    conexão entre pessoas e animais que
+                                    precisam de um lar.
+                                </p>
+
+                                <div class="techs">
+
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>CSS</span>
+                                    <span>UI/UX</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a
+                                        href="https://sitetocadostatus.vercel.app/"
+                                        class="btn"
+                                    >
+                                        <i class="ri-external-link-line"></i>
+                                        Ver projeto
+                                    </a>
+
+                                    <a
+                                        href="https://github.com/amykrumenauer/Toca-dos-Tatus"
+                                        class="btn-outline"
+                                    >
+                                        <i class="ri-github-line"></i>
+                                        GitHub
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- SIMTUNE -->
+
+                        <article class="project">
+
+                            <div class="project-number">
+                                03
+                            </div>
+
+                            <div class="project-decoration">
+                                ✦
+                            </div>
+
+                            <div class="project-info">
+
+                                <span class="project-type">
+                                    PROJETO
+                                </span>
+
+                                <h3>
+                                    Simtune
+                                </h3>
+
+                                <p>
+                                    Projeto digital desenvolvido
+                                    em parceria, com setups
+                                    perfeitos para cada carro
+                                    e pista.
+                                </p>
+
+                                <div class="techs">
+
+                                    <span>React 19</span>
+                                    <span>Node.js 20+</span>
+                                    <span>Docker</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a
+                                        href="https://simtune.net/"
+                                        class="btn"
+                                    >
+                                        <i class="ri-external-link-line"></i>
+                                        Ver projeto
+                                    </a>
+
+                                    <a
+                                        href="https://github.com/Pdr-06/simtune"
+                                        class="btn-outline"
+                                    >
+                                        <i class="ri-github-line"></i>
+                                        GitHub
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- AMAPE -->
+
+                        <article class="project">
+
+                            <div class="project-number">
+                                04
+                            </div>
+
+                            <div class="project-decoration">
+                                ✿
+                            </div>
+
+                            <div class="project-info">
+
+                                <span class="project-type">
+                                    PROJETO AUTORAL
+                                </span>
+
+                                <h3>
+                                    AMAPE Tecnologia
+                                </h3>
+
+                                <p>
+                                    Projeto autoral criado para representar
+                                    meus serviços em tecnologia,
+                                    desenvolvimento, suporte e
+                                    cibersegurança, incluindo identidade
+                                    visual e presença digital.
+                                </p>
+
+                                <div class="techs">
+
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Branding</span>
+
+                                </div>
+
+                                <div class="project-links">
+
+                                    <a
+                                        href="https://amape-tecnologia.vercel.app/"
+                                        class="btn"
+                                    >
+                                        <i class="ri-external-link-line"></i>
+                                        Ver projeto
+                                    </a>
+
+                                    <a
+                                        href="https://github.com/amykrumenauer/Amape_Tecnologia"
+                                        class="btn-outline"
+                                    >
+                                        <i class="ri-github-line"></i>
+                                        GitHub
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <button
+                        class="arrow next"
+                        aria-label="Próximo projeto"
+                    >
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJETOS CONCEITUAIS
+        ====================================================== -->
+
+        <section id="future-projects">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Se eu pudesse criar...
+                </h2>
+
+                <p class="section-intro">
+                    Ideias de projetos que eu desenvolveria para marcas
+                    caso tivesse a oportunidade de trabalhar com elas.
+                </p>
+
+
+                <div class="timeline">
+
+
+                    <!-- ROTA 98 -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                PROJETO CONCEITUAL · 01
+                            </span>
+
+                            <h3>
+                                Rota 98
+                            </h3>
+
+                            <p>
+                                Uma experiência digital para bar,
+                                karaokê e sinuca, com cardápio,
+                                reservas e uma identidade visual
+                                marcante.
+                            </p>
+
+                            <div class="concept-icon">
+                                <i class="ri-mic-line"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOCEARTE -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                PROJETO CONCEITUAL · 02
+                            </span>
+
+                            <h3>
+                                DoceArte
+                            </h3>
+
+                            <p>
+                                Uma presença digital para uma marca
+                                de doces, unindo catálogo, apresentação
+                                dos produtos e comunicação visual.
+                            </p>
+
+                            <div class="concept-icon">
+                                <i class="ri-cake-3-line"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOCERIA -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                PROJETO CONCEITUAL · 03
+                            </span>
+
+                            <h3>
+                                Doceria Maria Assis
+                            </h3>
+
+                            <p>
+                                Um catálogo digital completo com
+                                categorias, produtos, quantidades,
+                                detalhes e integração com WhatsApp.
+                            </p>
+
+                            <div class="concept-icon">
+                                <i class="ri-cup-line"></i>
+                            </div>
 
                         </div>
 
@@ -427,243 +1074,269 @@
 
             </div>
 
-            <!-- Botão Próximo -->
-            <button class="arrow next">
-                <i class="ri-arrow-right-s-line"></i>
-            </button>
+        </section>
 
-        </div>
 
-    </div>
+        <!-- =====================================================
+             CRIAÇÕES
+        ====================================================== -->
 
-</section>
+        <section id="creations">
 
-  <section id="cyber">
+            <div class="container">
 
-    <div class="container">
+                <h2 class="section-title">
+                    Além do código
+                </h2>
 
-        <h2 class="section-title">
-            C y b e r s e c u r i t y
-        </h2>
+                <p class="section-intro">
+                    Tecnologia é uma parte de mim. A criatividade
+                    aparece de vários outros jeitos também.
+                </p>
 
-        <div class="skills-grid">
 
-            <div class="card">
-                <i class="ri-shield-check-fill"></i>
-                <h3>OWASP</h3>
-            </div>
+                <div class="creations-grid">
 
-            <div class="card">
-                <i class="ri-terminal-fill"></i>
-                <h3>Kali Linux</h3>
-            </div>
 
-            <div class="card">
-                <i class="ri-bug-fill"></i>
-                <h3>Burp Suite</h3>
-            </div>
+                    <div class="creation card">
 
-            <div class="card">
-                <i class="ri-radar-fill"></i>
-                <h3>Nmap</h3>
-            </div>
+                        <div class="creation-icon">
+                            <i class="ri-shape-line"></i>
+                        </div>
 
-            <div class="card">
-                <i class="ri-global-line"></i>
-                <h3>Wireshark</h3>
-            </div>
+                        <h3>
+                            Logo da AMAPE
+                        </h3>
 
-            <div class="card">
-                <i class="ri-lock-password-fill"></i>
-                <h3>PowerShell</h3>
-            </div>
+                        <p>
+                            Identidade visual e construção da marca.
+                        </p>
 
-        </div>
+                    </div>
 
-    </div>
 
-</section>
+                    <div class="creation card">
 
- <!--==================== TIMELINE ====================-->
+                        <div class="creation-icon">
+                            <i class="ri-restaurant-line"></i>
+                        </div>
 
-<section id="timeline">
+                        <h3>
+                            Cardápios
+                        </h3>
 
-    <div class="container">
+                        <p>
+                            Criação de cardápios para docerias e
+                            estabelecimentos.
+                        </p>
 
-        <h2 class="section-title">
-            Minha&nbsp;&nbsp;Jornada
-        </h2>
+                    </div>
 
-        <div class="timeline">
 
-            <div class="timeline-item">
+                    <div class="creation card">
 
-                <div class="timeline-dot"></div>
+                        <div class="creation-icon">
+                            <i class="ri-image-line"></i>
+                        </div>
 
-                <div class="timeline-content">
+                        <h3>
+                            Posts
+                        </h3>
 
-                    <span>2022 • 2023</span>
+                        <p>
+                            Conteúdo visual para marcas e projetos.
+                        </p>
 
-                    <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                    </div>
 
-                    <p>
-                        SENAI
-                    </p>
 
-                    <p>
-                        Formação técnica com foco em lógica de programação,
-                        banco de dados, desenvolvimento web, orientação a objetos
-                        e desenvolvimento de software.
-                    </p>
+                    <div class="creation card">
 
-                </div>
+                        <div class="creation-icon">
+                            <i class="ri-camera-3-line"></i>
+                        </div>
 
-            </div>
+                        <h3>
+                            Fotos que amo
+                        </h3>
 
-            <div class="timeline-item">
+                        <p>
+                            Fotografias e pequenos registros que
+                            guardo pelo caminho.
+                        </p>
 
-                <div class="timeline-dot"></div>
+                    </div>
 
-                <div class="timeline-content">
 
-                    <span>2024 • 2026</span>
+                    <div class="creation card">
 
-                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <div class="creation-icon">
+                            <i class="ri-pencil-line"></i>
+                        </div>
 
-                    <p>
-                        PUCPR
-                    </p>
+                        <h3>
+                            Desenhos
+                        </h3>
 
-                    <p>
-                        Graduação voltada para desenvolvimento Full Stack,
-                        engenharia de software, banco de dados, arquitetura,
-                        APIs, UX/UI e desenvolvimento de aplicações modernas.
-                    </p>
+                        <p>
+                            Ilustrações e ideias feitas à mão.
+                        </p>
 
-                </div>
+                    </div>
 
-            </div>
 
-            <div class="timeline-item">
+                    <div class="creation card">
 
-                <div class="timeline-dot"></div>
+                        <div class="creation-icon">
+                            <i class="ri-quill-pen-line"></i>
+                        </div>
 
-                <div class="timeline-content">
+                        <h3>
+                            Poemas
+                        </h3>
 
-                    <span>2026 • Atualmente</span>
+                        <p>
+                            Palavras, sentimentos e pensamentos
+                            transformados em texto.
+                        </p>
 
-                    <h3>Pós-graduação em Cibersegurança</h3>
+                    </div>
 
-                    <p>
-                        PUCPR
-                    </p>
 
-                    <p>
-                        Especialização em segurança da informação,
-                        proteção de infraestruturas, análise de vulnerabilidades,
-                        redes, gestão de riscos e boas práticas de segurança.
-                    </p>
+                    <div class="creation card">
 
-                </div>
+                        <div class="creation-icon">
+                            <i class="ri-cake-3-line"></i>
+                        </div>
 
-            </div>
+                        <h3>
+                            Doces
+                        </h3>
 
-            <div class="timeline-item">
+                        <p>
+                            Porque criar também pode ser algo
+                            delicioso.
+                        </p>
 
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span>2026 • Atualmente</span>
-
-                    <h3>Curso de Inglês</h3>
-
-                    <p>
-                        Yázigi
-                    </p>
-
-                    <p>
-                        Desenvolvimento da comunicação em inglês para atuação
-                        profissional, leitura de documentação técnica e colaboração
-                        em ambientes internacionais.
-                    </p>
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </div>
 
-</section>
+        <!-- =====================================================
+             CONTATO
+        ====================================================== -->
 
-    <!--==================== CONTATO ====================-->
+        <section id="contact">
 
-    <section id="contact">
+            <div class="container">
 
-        <div class="container">
+                <div class="contact-decoration">
+                    ✿
+                </div>
 
-            <h2 class="section-title">
+                <h2 class="section-title">
+                    Vamos criar algo?
+                </h2>
 
-                Vamos Conversar?
+                <p class="contact-intro">
+                    Se você tem uma ideia, um projeto ou simplesmente
+                    quer conversar sobre tecnologia, design ou
+                    criatividade, minha caixa de entrada está aberta.
+                </p>
 
-            </h2>
 
-        <form action="https://formsubmit.co/krumenaueramy5@gmail.com" method="POST">
+                <form
+                    action="#"
+                    method="POST"
+                >
 
-    <input type="text" name="nome" placeholder="Nome" required>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Seu nome"
+                        required
+                    >
 
-    <input type="email" name="email" placeholder="E-mail" required>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Seu e-mail"
+                        required
+                    >
 
-    <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+                    <textarea
+                        name="message"
+                        placeholder="Me conte sobre sua ideia..."
+                        required
+                    ></textarea>
 
-    <button class="btn" type="submit">
-        Enviar
-    </button>
+                    <button
+                        type="submit"
+                        class="btn"
+                    >
+                        Enviar mensagem
 
-    <input type="hidden" name="_captcha" value="false">
+                        <i
+                            class="ri-arrow-right-line"
+                        ></i>
 
-    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                    </button>
 
-</form>
-        </div>
+                </form>
 
-    </section>
+            </div>
 
-    <!--==================== FOOTER ====================-->
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
+        <div class="footer-flower left">
+            ✿
+        </div>
+
+        <div class="footer-flower right">
+            ❀
+        </div>
+
         <div class="container">
 
+            <div class="footer-symbol">
+                ✦
+            </div>
+
             <h2>
-
                 Amanda Krumenauer
-
             </h2>
 
             <p>
-
-                Desenvolvedora Full Stack • Cybersecurity
-
+                código, criatividade e algumas ideias no caminho.
             </p>
 
             <span>
-
-                © 2026 Todos os direitos reservados.
-
+                ©
+                <span id="year"></span>
+                Amanda Krumenauer.
+                Todos os direitos reservados.
             </span>
 
         </div>
 
     </footer>
 
-    <!--==================== PARTICLES ====================-->
 
-    <canvas id="particles"></canvas>
-
-    <!--==================== JAVASCRIPT ====================-->
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 

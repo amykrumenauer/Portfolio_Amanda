@@ -1,59 +1,115 @@
-/* ==========================================
+/* =========================================================
+   AMANDA KRUMENAUER — PORTFÓLIO
+   JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
    LOADER
-========================================== */
+========================================================= */
 
 window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    loader.style.opacity = "0";
+    if (!loader) return;
 
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
     loader.style.pointerEvents = "none";
 
     setTimeout(() => {
-
         loader.style.display = "none";
-
-    }, 600);
+    }, 700);
 
 });
 
-/* ==========================================
-   NAVBAR
-========================================== */
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+const menuBtn = document.querySelector("#menu-btn");
+const nav = document.querySelector("#nav-menu");
+
+if (menuBtn && nav) {
+
+    menuBtn.addEventListener("click", () => {
+
+        nav.classList.toggle("active");
+
+        if (nav.classList.contains("active")) {
+
+            menuBtn.classList.remove("ri-menu-3-line");
+            menuBtn.classList.add("ri-close-line");
+
+        } else {
+
+            menuBtn.classList.remove("ri-close-line");
+            menuBtn.classList.add("ri-menu-3-line");
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   FECHAR MENU AO CLICAR
+========================================================= */
+
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav?.classList.remove("active");
+
+        menuBtn?.classList.remove("ri-close-line");
+        menuBtn?.classList.add("ri-menu-3-line");
+
+    });
+
+});
+
+
+/* =========================================================
+   NAVBAR NO SCROLL
+========================================================= */
 
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
 
+    if (!header) return;
+
     if (window.scrollY > 60) {
 
-        header.style.background = "rgba(10,10,10,.95)";
-        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.4)";
+        header.classList.add("scrolled");
 
     } else {
 
-        header.style.background = "rgba(0,0,0,.4)";
-        header.style.boxShadow = "none";
+        header.classList.remove("scrolled");
 
     }
 
 });
 
-/* ==========================================
+
+/* =========================================================
    TYPEWRITER
-========================================== */
+========================================================= */
 
 const typing = document.getElementById("typing");
 
 const words = [
-
     "Full Stack Developer",
-    "Cybersecurity",
-    "UI / UX Designer",
+    "Frontend Developer",
     "Backend Developer",
-    "Frontend Developer"
-
+    "UI / UX Designer",
+    "Criadora de soluções digitais"
 ];
 
 let wordIndex = 0;
@@ -62,25 +118,32 @@ let deleting = false;
 
 function type() {
 
-    const current = words[wordIndex];
+    if (!typing) return;
+
+    const currentWord = words[wordIndex];
 
     if (!deleting) {
 
-        typing.textContent = current.substring(0, charIndex++);
+        typing.textContent =
+            currentWord.substring(0, charIndex);
 
-        if (charIndex > current.length) {
+        charIndex++;
+
+        if (charIndex > currentWord.length) {
 
             deleting = true;
 
             setTimeout(type, 1500);
 
             return;
-
         }
 
     } else {
 
-        typing.textContent = current.substring(0, charIndex--);
+        typing.textContent =
+            currentWord.substring(0, charIndex);
+
+        charIndex--;
 
         if (charIndex < 0) {
 
@@ -89,245 +152,479 @@ function type() {
             wordIndex++;
 
             if (wordIndex >= words.length) {
-
                 wordIndex = 0;
-
             }
 
         }
 
     }
 
-    setTimeout(type, deleting ? 50 : 100);
-
+    setTimeout(
+        type,
+        deleting ? 45 : 90
+    );
 }
 
 type();
 
-/* ==========================================
-   CURSOR
-========================================== */
 
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", e => {
-
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-
-});
-
-/* ==========================================
+/* =========================================================
    SCROLL REVEAL
-========================================== */
+========================================================= */
 
-const reveals = document.querySelectorAll("section");
+const revealElements =
+    document.querySelectorAll(
+        "section, .project, .creation, .card, .timeline-item"
+    );
 
-function revealSections() {
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
 
-    const trigger = window.innerHeight * 0.85;
+            entries.forEach(entry => {
 
-    reveals.forEach(section => {
+                if (entry.isIntersecting) {
 
-        const top = section.getBoundingClientRect().top;
+                    entry.target.classList.add("visible");
 
-        if (top < trigger) {
+                    revealObserver.unobserve(
+                        entry.target
+                    );
 
-            section.style.opacity = "1";
-            section.style.transform = "translateY(0px)";
+                }
 
+            });
+
+        },
+        {
+            threshold: 0.12
         }
+    );
 
-    });
+revealElements.forEach(element => {
 
-}
+    element.classList.add("reveal");
 
-reveals.forEach(section => {
-
-    section.style.opacity = "0";
-    section.style.transform = "translateY(80px)";
-    section.style.transition = ".8s";
+    revealObserver.observe(element);
 
 });
 
-window.addEventListener("scroll", revealSections);
 
-revealSections();
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
 
-/* ==========================================
-   BOTÃO TOPO
-========================================== */
-
-const topButton = document.createElement("button");
+const topButton =
+    document.createElement("button");
 
 topButton.innerHTML = "↑";
 
 topButton.classList.add("topButton");
 
+topButton.setAttribute(
+    "aria-label",
+    "Voltar ao topo"
+);
+
 document.body.appendChild(topButton);
 
-topButton.onclick = () => {
+window.addEventListener("scroll", () => {
 
-    window.scrollTo({
+    if (window.scrollY > 400) {
 
-        top:0,
-        behavior:"smooth"
+        topButton.style.opacity = "1";
+        topButton.style.visibility = "visible";
 
-    });
+    } else {
 
-}
-
-window.addEventListener("scroll", ()=>{
-
-    if(window.scrollY>400){
-
-        topButton.style.opacity="1";
-        topButton.style.visibility="visible";
-
-    }else{
-
-        topButton.style.opacity="0";
-        topButton.style.visibility="hidden";
+        topButton.style.opacity = "0";
+        topButton.style.visibility = "hidden";
 
     }
 
 });
 
-/* ==========================================
-   PROJETOS
-========================================== */
+topButton.addEventListener("click", () => {
 
-const track = document.querySelector(".carousel-track");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
-
-next.addEventListener("click", () => {
-    track.scrollBy({
-        left: track.clientWidth,
+    window.scrollTo({
+        top: 0,
         behavior: "smooth"
     });
+
 });
 
-prev.addEventListener("click", () => {
-    track.scrollBy({
-        left: -track.clientWidth,
-        behavior: "smooth"
+
+/* =========================================================
+   CARROSSEL DE PROJETOS
+========================================================= */
+
+const track =
+    document.querySelector(".carousel-track");
+
+const next =
+    document.querySelector(".next");
+
+const prev =
+    document.querySelector(".prev");
+
+if (track && next && prev) {
+
+    next.addEventListener("click", () => {
+
+        track.scrollBy({
+            left: track.clientWidth,
+            behavior: "smooth"
+        });
+
     });
-});
 
-/* ==========================================
-   PARTICULAS
-========================================== */
+    prev.addEventListener("click", () => {
 
-const canvas = document.getElementById("particles");
+        track.scrollBy({
+            left: -track.clientWidth,
+            behavior: "smooth"
+        });
 
-if(canvas){
-
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles=[];
-
-for(let i=0;i<120;i++){
-
-particles.push({
-
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2,
-dx:(Math.random()-0.5),
-dy:(Math.random()-0.5)
-
-});
+    });
 
 }
 
-function animate(){
 
-ctx.clearRect(0,0,canvas.width,canvas.height);
+/* =========================================================
+   ESTRELAS
+========================================================= */
 
-particles.forEach(p=>{
+const starsContainer =
+    document.querySelector(".stars");
 
-ctx.beginPath();
+if (starsContainer) {
 
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    const numberOfStars = 100;
 
-ctx.fillStyle="#fbff00";
+    for (let i = 0; i < numberOfStars; i++) {
 
-ctx.fill();
+        const star =
+            document.createElement("span");
 
-p.x+=p.dx;
-p.y+=p.dy;
+        star.classList.add("star");
 
-if(p.x<0)p.x=canvas.width;
-if(p.x>canvas.width)p.x=0;
+        star.style.left =
+            `${Math.random() * 100}%`;
 
-if(p.y<0)p.y=canvas.height;
-if(p.y>canvas.height)p.y=0;
+        star.style.top =
+            `${Math.random() * 100}%`;
 
-});
+        const size =
+            Math.random() * 2 + 1;
 
-requestAnimationFrame(animate);
+        star.style.width =
+            `${size}px`;
+
+        star.style.height =
+            `${size}px`;
+
+        star.style.animationDelay =
+            `${Math.random() * 4}s`;
+
+        star.style.animationDuration =
+            `${2 + Math.random() * 4}s`;
+
+        starsContainer.appendChild(star);
+
+    }
 
 }
 
-animate();
 
-window.addEventListener("resize",()=>{
+/* =========================================================
+   METEOROS
+========================================================= */
 
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+const meteorsContainer =
+    document.querySelector(".meteors");
 
-});
+if (meteorsContainer) {
+
+    const numberOfMeteors = 6;
+
+    for (let i = 0; i < numberOfMeteors; i++) {
+
+        const meteor =
+            document.createElement("span");
+
+        meteor.classList.add("meteor");
+
+        meteor.style.left =
+            `${Math.random() * 120}%`;
+
+        meteor.style.top =
+            `${Math.random() * 50}%`;
+
+        meteor.style.animationDelay =
+            `${Math.random() * 10}s`;
+
+        meteor.style.animationDuration =
+            `${5 + Math.random() * 5}s`;
+
+        meteorsContainer.appendChild(meteor);
+
+    }
 
 }
 
-/* ==========================================
-   EFEITO 3D NOS CARDS
-========================================== */
 
-document.addEventListener("mousemove",(e)=>{
+/* =========================================================
+   PARALLAX SUAVE DA FOTO
+========================================================= */
 
-document.querySelectorAll(".card,.project").forEach(card=>{
+const heroImage =
+    document.querySelector(".hero-image");
 
-const rect=card.getBoundingClientRect();
+if (
+    heroImage &&
+    window.matchMedia("(pointer: fine)").matches
+) {
 
-const x=e.clientX-rect.left;
+    document.addEventListener(
+        "mousemove",
+        event => {
 
-const y=e.clientY-rect.top;
+            const x =
+                event.clientX /
+                window.innerWidth -
+                0.5;
 
-const rotateX=(y-rect.height/2)/20;
+            const y =
+                event.clientY /
+                window.innerHeight -
+                0.5;
 
-const rotateY=(rect.width/2-x)/20;
+            heroImage.style.transform =
+                `translate(${x * 8}px, ${y * 8}px)`;
 
-card.style.transform=`
-perspective(1000px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-`;
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CURSOR PERSONALIZADO
+========================================================= */
+
+const cursor =
+    document.querySelector(".cursor");
+
+if (
+    cursor &&
+    window.matchMedia("(pointer: fine)").matches
+) {
+
+    document.addEventListener(
+        "mousemove",
+        event => {
+
+            cursor.style.left =
+                `${event.clientX}px`;
+
+            cursor.style.top =
+                `${event.clientY}px`;
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CURSOR INTERATIVO
+========================================================= */
+
+const interactiveElements =
+    document.querySelectorAll(
+        "a, button, .card, .project"
+    );
+
+interactiveElements.forEach(element => {
+
+    element.addEventListener(
+        "mouseenter",
+        () => {
+
+            if (!cursor) return;
+
+            cursor.style.width = "14px";
+            cursor.style.height = "14px";
+
+        }
+    );
+
+    element.addEventListener(
+        "mouseleave",
+        () => {
+
+            if (!cursor) return;
+
+            cursor.style.width = "8px";
+            cursor.style.height = "8px";
+
+        }
+    );
 
 });
 
-});
 
-/* ==========================================
+/* =========================================================
    ANO AUTOMÁTICO
-========================================== */
+========================================================= */
 
-const year=document.querySelector("#year");
+const year =
+    document.querySelector("#year");
 
-if(year){
+if (year) {
 
-year.textContent=new Date().getFullYear();
+    year.textContent =
+        new Date().getFullYear();
 
 }
-const menuBtn = document.querySelector("#menu-btn");
-const nav = document.querySelector("#nav-menu");
 
-menuBtn.addEventListener("click", () => {
 
-    nav.classList.toggle("active");
+/* =========================================================
+   SUAVIDADE EXTRA DOS CARDS
+========================================================= */
 
-});
+const cards =
+    document.querySelectorAll(
+        ".card, .project"
+    );
+
+if (
+    window.matchMedia("(pointer: fine)").matches
+) {
+
+    cards.forEach(card => {
+
+        card.addEventListener(
+            "mousemove",
+            event => {
+
+                const rect =
+                    card.getBoundingClientRect();
+
+                const x =
+                    event.clientX - rect.left;
+
+                const y =
+                    event.clientY - rect.top;
+
+                const rotateX =
+                    (y - rect.height / 2) / 35;
+
+                const rotateY =
+                    (rect.width / 2 - x) / 35;
+
+                card.style.transform =
+                    `perspective(1000px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     translateY(-5px)`;
+
+            }
+        );
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+                card.style.transform = "";
+
+            }
+        );
+
+    });
+
+}
+
+/* =========================================================
+   METEOROS
+========================================================= */
+
+function createMeteor() {
+
+    const meteor = document.createElement("span");
+
+    meteor.classList.add("meteor");
+
+    meteor.style.left =
+        `${Math.random() * 120}%`;
+
+    meteor.style.top =
+        `${Math.random() * 45}%`;
+
+    const duration =
+        3 + Math.random() * 4;
+
+    meteor.style.animationDuration =
+        `${duration}s`;
+
+    meteor.style.animationDelay =
+        `${Math.random() * 8}s`;
+
+    document.body.appendChild(meteor);
+
+    setTimeout(() => {
+        meteor.remove();
+    }, (duration + 8) * 1000);
+}
+
+setInterval(() => {
+
+    if (Math.random() > 0.35) {
+        createMeteor();
+    }
+
+}, 3500);
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+const contactForm =
+    document.querySelector("#contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+            const name =
+                contactForm.querySelector(
+                    '[name="name"]'
+                )?.value;
+
+            const message =
+                contactForm.querySelector(
+                    '[name="message"]'
+                )?.value;
+
+            if (!name || !message) {
+
+                alert(
+                    "Preencha seu nome e sua mensagem."
+                );
+
+                return;
+
+            }
+
+            alert(
+                "Mensagem pronta para ser enviada!"
+            );
+
+        }
+    );
+
+}
