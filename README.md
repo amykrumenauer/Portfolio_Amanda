@@ -1,146 +1,21 @@
-# 💜 Amanda Krumenauer | Portfólio
+# ✦ Amanda Krumenauer
 
-Bem-vindo ao meu portfólio!
+**Tecnologia, criatividade & código.**
 
-Este projeto foi desenvolvido para apresentar minha trajetória, habilidades e principais projetos como Desenvolvedora Full Stack e estudante de Cibersegurança.
+Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos e criações.
 
-## 🌐 Acesse
+### Tech Stack
 
-🔗 **Portfólio:** (https://portfolio-amanda-lime.vercel.app/)
+`HTML` `CSS` `JavaScript`
 
----
+### ✿ Sobre
 
-## ✨ Sobre
+Desenvolvedora apaixonada por criar experiências digitais que unem **lógica, estética e propósito**.
 
-SSou apaixonada por tecnologia e por criar soluções que unem design, performance e segurança.
+### 🌐 Portfólio
 
-Sou formada em Desenvolvimento de Sistemas, graduada em Análise e Desenvolvimento de Sistemas e atualmente curso uma pós-graduação em Cibersegurança. Tenho experiência no desenvolvimento de aplicações web e estou em constante evolução como Desenvolvedora Full Stack.
-
----
-
-## 🚀 Tecnologias
-
-### Front-end
-
-- HTML5
-- CSS3
-- JavaScript
-- React
-
-### Back-end
-
-- Node.js
-- Java
-- Python
-- PHP
-
-### Banco de Dados
-
-- MySQL
-- SQLite
-
-### Ferramentas
-
-- Git
-- GitHub
-- Docker
-- Linux
-
-### Cibersegurança
-
-- OWASP
-- Nmap
-- Wireshark
-- Burp Suite
-- Kali Linux
-- PowerShell
+[portfolio-amanda-lime.vercel.app](https://portfolio-amanda-lime.vercel.app/)
 
 ---
 
-## 📂 Projetos
-
-### 💜 AMAPE Tecnologia
-
-Landing page institucional desenvolvida para apresentar os serviços da empresa.
-
-Tecnologias:
-
-- HTML
-- CSS
-- JavaScript
-
----
-
-### 🦡 Toca dos Tatus
-
-Plataforma para adoção responsável de animais.
-
-Tecnologias:
-
-- React
-- Node.js
-- JavaScript
-
----
-
-### 🐟 Peixaria & Empório do Vale
-
-Website institucional moderno e responsivo.
-
-Tecnologias:
-
-- HTML
-- CSS
-- JavaScript
-
----
-
-## 🎓 Formação
-
-**SENAI**
-
-Técnico em Desenvolvimento de Sistemas
-
-2022 • 2023
-
----
-
-**PUCPR**
-
-Análise e Desenvolvimento de Sistemas
-
-2024 • 2026
-
----
-
-**PUCPR**
-
-Pós-graduação em Cibersegurança
-
-2026 • Atualmente
-
----
-
-**Yizági**
-
-Curso de Inglês
-
-2026 • Atualmente
-
----
-
-## 📫 Contato
-
-💼 LinkedIn: https://linkedin.com/in/amandakrumenauer
-
-🐙 GitHub: https://github.com/amykrumenauer
-
-🌐 Portfólio: https://portfolio-amanda-lime.vercel.app/
-
----
-
-## © Licença
-
-Este projeto foi desenvolvido por **Amanda Krumenauer**.
-
-Todos os direitos reservados.
+*Feito por Amanda Krumenauer — 2026.*
