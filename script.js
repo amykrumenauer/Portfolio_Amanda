@@ -585,6 +585,134 @@ setInterval(() => {
 
 }, 3500);
 
+/* =====================================================
+   GALERIA — ALÉM DO CÓDIGO
+====================================================== */
+
+const galleryTrack = document.querySelector(".gallery-track");
+const galleryItems = document.querySelectorAll(".gallery-item");
+const galleryPrev = document.querySelector(".gallery-prev");
+const galleryNext = document.querySelector(".gallery-next");
+const galleryDots = document.querySelector(".gallery-dots");
+
+let galleryIndex = 0;
+
+function getVisibleItems() {
+    if (window.innerWidth <= 600) {
+        return 1;
+    }
+
+    if (window.innerWidth <= 900) {
+        return 2;
+    }
+
+    return 3;
+}
+
+function getMaxIndex() {
+    return Math.max(
+        0,
+        galleryItems.length - getVisibleItems()
+    );
+}
+
+function updateGallery() {
+
+    if (!galleryItems.length) return;
+
+    const itemWidth = galleryItems[0].getBoundingClientRect().width;
+    const gap = 24;
+
+    galleryTrack.style.transform =
+        `translateX(-${galleryIndex * (itemWidth + gap)}px)`;
+
+    updateGalleryDots();
+}
+
+function updateGalleryDots() {
+
+    galleryDots.innerHTML = "";
+
+    const visibleItems = getVisibleItems();
+    const totalPages = Math.ceil(
+        galleryItems.length / visibleItems
+    );
+
+    const currentPage = Math.floor(
+        galleryIndex / visibleItems
+    );
+
+    for (let i = 0; i < totalPages; i++) {
+
+        const dot = document.createElement("button");
+
+        dot.classList.add("gallery-dot");
+
+        if (i === currentPage) {
+            dot.classList.add("active");
+        }
+
+        dot.setAttribute(
+            "aria-label",
+            `Ir para página ${i + 1}`
+        );
+
+        dot.addEventListener("click", () => {
+
+            galleryIndex = Math.min(
+                i * visibleItems,
+                getMaxIndex()
+            );
+
+            updateGallery();
+
+        });
+
+        galleryDots.appendChild(dot);
+    }
+}
+
+galleryNext.addEventListener("click", () => {
+
+    const maxIndex = getMaxIndex();
+
+    if (galleryIndex < maxIndex) {
+        galleryIndex++;
+    } else {
+        galleryIndex = 0;
+    }
+
+    updateGallery();
+
+});
+
+galleryPrev.addEventListener("click", () => {
+
+    const maxIndex = getMaxIndex();
+
+    if (galleryIndex > 0) {
+        galleryIndex--;
+    } else {
+        galleryIndex = maxIndex;
+    }
+
+    updateGallery();
+
+});
+
+window.addEventListener("resize", () => {
+
+    galleryIndex = Math.min(
+        galleryIndex,
+        getMaxIndex()
+    );
+
+    updateGallery();
+
+});
+
+updateGallery();
+
 /* =========================================================
    FORMULÁRIO
 ========================================================= */
